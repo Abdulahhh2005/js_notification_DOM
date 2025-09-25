@@ -2,7 +2,7 @@
 
 const pushNotification = (posTop, posRight, title, description, type) => {
   // Присвоєння або створення елементів
-  const body = document.querySelector('body');
+  const body = document.body;
   const box = document.createElement('div');
   const titleBox = document.createElement('h2');
   const descriptionBox = document.createElement('p');
@@ -27,6 +27,7 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   descriptionBox.textContent = description;
 
   // Додати стилі позиціонування
+  box.style.position = 'absolute';
   box.style.top = posTop + 'px';
   box.style.right = posRight + 'px';
 
